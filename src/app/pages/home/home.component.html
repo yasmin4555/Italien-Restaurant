@@ -1,0 +1,68 @@
+<!-- HERO HEADER SECTION -->
+<div class="hero-header">
+  <div class="header-text">
+    <h1>Luxury Food</h1>
+    <p>From Italy with love </p>
+    <button (click)="toggleForm()">Book a Table</button>
+
+    <form *ngIf="showForm" (ngSubmit)="submitReservation()" #formRef="ngForm">
+      <label>Time:
+        <input type="time" [(ngModel)]="reservation.Time" name="time" required />
+      </label>
+      <br><br>
+      <label>Number of people:
+        <input type="number" [(ngModel)]="reservation.people" name="people" required />
+      </label>
+      <br><br>
+      <label class="food-label">
+        Food Preferences:
+        <div>
+        <button type="button" (click)="goToMenu()">Menu</button>
+</div>
+      </label>
+      <!-- Show selected foods -->
+      <div *ngIf="reservation.foods.length > 0">
+        <h4>Selected Foods:</h4>
+        <ul>
+          <li *ngFor="let food of reservation.foods; let i = index">
+            {{ food.quantity }} × {{ food.name }}
+            <button type="button" (click)="removeFood(i)">Remove</button>
+          </li>
+
+        </ul>
+      </div>
+      <br>
+      <button type="submit">Submit Reservation</button>
+    </form>
+  </div>
+</div>
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.PMqWalG0o9orq9s5HezHpQHaFR&pid=Api&P=0&h=180" class="d-block w-100" alt="food" />
+    </div>
+    <div class="carousel-item">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.3MEpKjAjT2jsg_JaMsx7egHaE8&pid=Api&P=0&h=180" class="d-block w-100" alt="pizza" />
+    </div>
+    <div class="carousel-item">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.ffuutaVPs4CKARlIbOyjygHaFI&pid=Api&P=0&h=180" class="d-block w-100" alt="salad" />
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+  <div *ngIf="reservation.foods.length > 0">
+    <h4>Selected Foods:</h4>
+    <ul>
+      <li *ngFor="let food of reservation.foods; let i = index">
+        {{ food.name }}
+        <button type="button" (click)="removeFood(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
+
+</div>

@@ -1,0 +1,47 @@
+.hero-header {
+    background-image: url('https://i.iheart.com/v3/re/new_assets/619d6e8b3a301f129af253e9?ops=contain(1480,0)');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    color: white;
+    text-align: center;
+  }
+
+  .hero-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* optional: dark overlay for better text contrast */
+    z-index: 1;
+  }
+
+  .header-text {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+  
+  .carousel-item img {
+    width: 20vh;
+   
+    padding: 10%;
+    margin: 5%;
+  }
+  .confirmation-message {
+    color: green;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  

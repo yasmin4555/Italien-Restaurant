@@ -1,0 +1,54 @@
+.login-container {
+    display: flex;
+    height: 100vh;
+    background-color: rgb(245, 245, 220);
+    background-position: center;
+    background-size: cover;
+
+    background-image: url("https://res.cloudinary.com/djcyhbk2e/image/upload/c_scale,f_auto,q_35,w_1400/v1/gvv/prod/polrfsf92ifswug54vki");
+  }
+  
+  .Login-image {
+    flex: 1;
+    /* You can optionally add an image here or leave as decorative space */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+
+  .login-text {
+    flex: 1;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: auto;
+    width: 100px; /* pushes it to the right */
+     
+  }
+  form button {
+    align-self: flex-end; /* Moves the button to the right */
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+ .form input{
+    padding: 10px 15px;
+    color: beige;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 10px;
+    width: 100%;
+    height:30% ;
+    box-sizing: border-box;
+ }

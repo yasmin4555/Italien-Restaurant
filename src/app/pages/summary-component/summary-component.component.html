@@ -1,0 +1,10 @@
+<h2>Selection Summary</h2>
+
+<div *ngFor="let category of groupedSelections | keyvalue">
+  <h3>{{ category.key }}</h3>
+  <ul>
+    <li *ngFor="let item of category.value">
+      {{ item.name }} — Quantity: {{ item.quantity }}
+    </li>
+  </ul>
+</div>
