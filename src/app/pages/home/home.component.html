@@ -36,33 +36,97 @@
     </form>
   </div>
 </div>
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+
+<h1 class="text-center my-4 fw-bold"> Our New Offers</h1>
+
+<div id="carouselOffers" class="carousel slide shadow-s rounded-3 overflow-hidden w-75 mx-auto" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://tse4.mm.bing.net/th?id=OIP.PMqWalG0o9orq9s5HezHpQHaFR&pid=Api&P=0&h=180" class="d-block w-100" alt="food" />
+      <img src=" https://c.pxhere.com/photos/c0/f1/handwritten_italian_marketing_menu_menu_board_offer_pizza_restaurant-974282.jpg!d"
+    
+      class="d-block w-100"
+           width="mx-auto"
+           height="mx-auto"
+           alt="food" />
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+        <h5>Friends Meal Deal</h5>
+        <p>Perfect for sharing with friends & family</p>
+      </div>
     </div>
+
     <div class="carousel-item">
-      <img src="https://tse3.mm.bing.net/th?id=OIP.3MEpKjAjT2jsg_JaMsx7egHaE8&pid=Api&P=0&h=180" class="d-block w-100" alt="pizza" />
-    </div>
-    <div class="carousel-item">
-      <img src="https://tse1.mm.bing.net/th?id=OIP.ffuutaVPs4CKARlIbOyjygHaFI&pid=Api&P=0&h=180" class="d-block w-100" alt="salad" />
+      <img src="https://hotcanadadeals.ca/wp-content/uploads/2022/09/Screen-Shot-2022-09-15-at-1.39.30-PM-730x656.png" 
+           class="d-block w-100"
+           alt="Family Meal Deal" />
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+        <h5>Family Specials</h5>
+        <p>Delicious bundles only for you and your family</p>
+      </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselOffers" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselOffers" data-bs-slide="next">
     <span class="carousel-control-next-icon"></span>
   </button>
+</div>
 
-  <div *ngIf="reservation.foods.length > 0">
-    <h4>Selected Foods:</h4>
-    <ul>
-      <li *ngFor="let food of reservation.foods; let i = index">
-        {{ food.name }}
-        <button type="button" (click)="removeFood(i)">Remove</button>
-      </li>
-    </ul>
+
+<h2 class="text-center my-5 fw-bold">Our New Desserts</h2>
+
+<div id="carouselDishes" class="carousel slide shadow-s rounded-3 overflow-hidden w-75 mx-auto " data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.eatalia.ma/wp-content/uploads/2024/03/Les-desserts-italiens-irresistibles-a-deguster-chez-Eatalia.png" 
+           class="d-block w-100"
+           alt="dessert" />
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+        <h5>Italian Classics</h5>
+        <p>Tiramisu, Panna Cotta & more</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.Xd4GadoTIb3D0wYX2Qv5zAHaEK?pid=Api&P=0&h=180" 
+           class="d-block w-100"
+           alt="fruit tart" />
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+        <h5>Fresh Tart</h5>
+        <p>Sweet and fruity perfection</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://img.taste.com.au/vYU0NCl5/taste/2016/11/cannoli-with-vanilla-custard-85970-1.jpeg" 
+           class="d-block w-100"
+           alt="cannoli" />
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+        <h5>Crispy Cannoli</h5>
+        <p>Filled with rich vanilla custard</p>
+      </div>
+    </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselDishes" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselDishes" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+<br> <br/>
+<app-carousel></app-carousel>
+
+
+<!-- Selected Foods Section -->
+<div *ngIf="reservation.foods.length > 0" class="mt-5">
+  <h4 class="fw-bold">Your Selected Foods:</h4>
+  <ul class="list-group">
+    <li *ngFor="let food of reservation.foods; let i = index" class="list-group-item d-flex justify-content-between align-items-center">
+      {{ food.name }}
+      <button type="button" class="btn btn-sm btn-danger" (click)="removeFood(i)">Remove</button>
+    </li>
+  </ul>
+
+
+
 
 </div>

@@ -1,10 +1,11 @@
 .login-container {
     display: flex;
     height: 100vh;
+    width: 120vh;
     background-color: rgb(245, 245, 220);
     background-position: center;
     background-size: cover;
-
+margin-left: 30%;
     background-image: url("https://res.cloudinary.com/djcyhbk2e/image/upload/c_scale,f_auto,q_35,w_1400/v1/gvv/prod/polrfsf92ifswug54vki");
   }
   

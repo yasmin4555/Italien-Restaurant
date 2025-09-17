@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { FoodSelectionService, FoodItem } from '../../food-selection.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { CarouselComponent } from '../carousel/carousel.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,CarouselComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

@@ -1,5 +1,5 @@
 .hero-header {
-    background-image: url('https://i.iheart.com/v3/re/new_assets/619d6e8b3a301f129af253e9?ops=contain(1480,0)');
+    background-image: url('https://a.cdn-hotels.com/gdcs/production48/d483/0f6f0f60-32bd-460e-9ab5-7c748cd37545.jpg?impolicy=fcrop&w=800&h=533&q=high');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,10 +33,9 @@
   }
   
   .carousel-item img {
-    width: 20vh;
-   
+ max-width: 100vh;
     padding: 10%;
-    margin: 5%;
+    margin: 12%;
   }
   .confirmation-message {
     color: green;

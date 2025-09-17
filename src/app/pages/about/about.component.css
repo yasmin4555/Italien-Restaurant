@@ -1,10 +1,30 @@
 .about-image{
 background-image: none;
 background-size: cover;
-width: 100vh;
-margin-right: 50%;
+
+margin-right: 30%;
 
 }
 .Aboutus-container.p{
     margin-left: auto;
+}
+.contact-section {
+    background: #f8f9fa;
+    border-radius: 12px;
+  }
+
+  .contact-details p {
+    margin: 0.3rem 0;
+  }
+
+  form input,
+  form textarea {
+    border-radius: 8px;
+  }
+.contact-image{
+background-size: cover;
+width: 115vh;
+
+margin-left: 10%;
+align-items: center;
 }

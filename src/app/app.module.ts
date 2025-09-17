@@ -8,7 +8,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MenuComponent } from './pages/menu/menu.component';
-
+import { CarouselComponent } from './pages/carousel/carousel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +16,7 @@ import { MenuComponent } from './pages/menu/menu.component';
     LoginComponent,
     AboutComponent,
     MenuComponent,
+    CarouselComponent,
 
   ],
   imports: [

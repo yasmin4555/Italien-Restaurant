@@ -8,6 +8,10 @@
          [class.selected]="item.quantity > 0">
       <img [src]="item.imageUrl" [alt]="item.name" width="120" />
       <p>{{ item.name }}</p>
+      <p class="price">{{ item.price | currency:'EUR' }}</p>
+      <p *ngIf="item.quantity > 0" class="total">
+        Total: {{ item.price * item.quantity | currency:'USD' }}
+      </p>
       <div class="quantity-controls">
         <button (click)="decreaseQuantity(item)">-</button>
         <span>{{ item.quantity }}</span>
